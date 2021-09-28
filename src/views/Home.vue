@@ -11,7 +11,7 @@
 
                 <!-- Login Form -->
                 <form v-on:submit.prevent="login">
-                  <input type="text" id="login" class="fadeIn second" name="login" placeholder="Usuario" v-model="usuario">
+                  <input type="email" id="login" class="fadeIn second" name="login" placeholder="email" v-model="email">
                   <input type="text" id="password" class="fadeIn third" name="login" placeholder="Password" v-model="password">
                   <input type="submit" class="fadeIn fourth" value="Log In">
                 </form>
@@ -37,29 +37,29 @@ export default {
   },
   data: function(){
     return {
-      usuario: "",
+      email: "",
       password: "",
       error: false,
       error_msg: "",
     }
   },
   methods:{
-    login(){
+    Login(){
         let json = {
-          "usuario" : this.usuario,
+          "email" : this.email,
           "password": this.password
         };
-        axios.post('http://solodata.es/auth', json)
+        axios.post('http://localhost:3000/api/auth/signin', json)
         .then( data =>{
            if(data.data.status == "ok"){
              localStorage.token = data.data.result.token;
-             this.$router.push('dashboard');
+             this.$router.push('Pensum');
            }else{
              this.error = true;
              this.error_msg = data.data.result.error_msg;
            }
         })
-    }
+    },
   }
 }
 </script>

@@ -142,11 +142,16 @@ export default {
         this.files = event.target.files
         },
       AgregarRegistro(){
-          const datosEnviar={file:this.files,description:this.pensum.description}
+          let json = {
+          "description" : this.pensum.description,
+          "file": this.files
+        };
+        console.log(json)
+          //const datosEnviar={file:this.files,description:this.pensum.description}
           fetch('http://localhost:3000/api/pensum',
           {
             method: "POST",
-            body: JSON.stringify(datosEnviar)
+            body: JSON.stringify(json)
           })
           .then(respuesta=>respuesta.json)
           .then((datosRespuesta)=>
