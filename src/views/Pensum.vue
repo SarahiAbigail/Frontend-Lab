@@ -135,6 +135,7 @@ export default {
       link.download = label;
       link.click();
       URL.revokeObjectURL(link.href);
+
       },
 
        uploadFile (event) {
@@ -151,8 +152,12 @@ export default {
           .then((datosRespuesta)=>
           {
               console.log(datosRespuesta)
-              window.location.href='Pensum'
-          })
+              this.makeToast("Hecho","Pensum Registrado","success");
+              //window.location.href='Pensum'
+          }).catch( e =>{
+                console.log(e);
+                 this.makeToast("Error","Error al Registrar","error");
+            })
       },
 
       borrarPensum(id){
@@ -166,9 +171,21 @@ export default {
               console.log(datosRespuesta)
               this.makeToast("Hecho","Pensum Eliminado","success");
               window.location.href='Pensum'
-          })
-          .catch(console.log)
-    }
+          }).catch( e =>{
+                console.log(e);
+                 this.makeToast("Error","Error al guardar","error");
+            })
+
+    },
+       makeToast(titulo,texto,tipo) {
+            this.toastCount++
+            this.$bvToast.toast(texto, {
+            title: titulo,
+            variant: tipo,
+            autoHideDelay: 5000,
+            appendToast: true
+            })
+        }
     }
 }
 </script>

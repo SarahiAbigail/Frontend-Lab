@@ -1,5 +1,6 @@
 <template>
     <div>
+        <Header/>
          <div class="registrarPensum">
         <div class="text-center">   
             <h1 class="h4 text-gray-900 mb-4">Registrar Usuario</h1>     
@@ -95,5 +96,34 @@
         </div>
     
     </div>
+    <Footer />
     </div>
 </template>
+
+
+<script>
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+//import axios from "axios";
+
+export default {
+  data() {
+    return {
+        pensums:[],
+
+        files: null,
+
+        pensum: {}
+    }
+  },
+  created:function(){
+    this.consultarPensum()
+  },
+   components:{
+        Header,
+        Footer,
+    },
+  methods: {
+  }
+}
+</script>

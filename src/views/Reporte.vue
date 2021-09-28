@@ -1,24 +1,6 @@
 <template>
     <div>
-        <div class="navbar navbar-expand-lg navbar-dark bg-dark menu">       
-        <h2 class="navbar-brand">Registro Académico DCyT <span class="material-icons" id="icon-graduate">                          
-            school                           
-        </span></h2>              
-            
-        <button class="navbar-toggler" data.toggle="collapse" data.target="#mylist">                                 
-            <span class="navbar-toggler-icon"></span>                       
-        </button>               
-                  
-        <div class="collapse navbar-collapse justify-content-end" id="mylist" >                   
-            <div class="navbar-nav">                              
-                 <router-link :to="{name:'Pensum'}" class="nav-link">Gestionar Usuarios</router-link> 
-                <router-link :to="{name:'Home'}" class="nav-link">Gestionar Usuarios</router-link>
-                <router-link :to="{name:'Home'}" class="nav-link">Gestionar Programas</router-link>
-                <router-link :to="{name:'Home'}" class="nav-link">Gestionar Reporte</router-link>
-                <router-link :to="{name:'Home'}" class="nav-link">Cerrar Sesión</router-link>                              
-            </div>      
-        </div>                              
-    </div>  
+      <Header/>
         <div class="text-center">
         <h1 class="h4 text-gray-900 mb-4">
             Cantidad de Pensum por Registrados por Programa 
@@ -63,8 +45,36 @@
             </tr>
           </table>
         </div>
-      
+
     </div>
-</div>
+    </div>
+     <Footer />
     </div>
 </template>
+
+<script>
+import Header from '@/components/Header.vue'
+import Footer from '@/components/Footer.vue'
+//import axios from "axios";
+
+export default {
+  data() {
+    return {
+        pensums:[],
+
+        files: null,
+
+        pensum: {}
+    }
+  },
+  created:function(){
+    this.consultarPensum()
+  },
+   components:{
+        Header,
+        Footer,
+    },
+  methods: {
+  }
+}
+</script>

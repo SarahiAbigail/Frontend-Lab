@@ -10,10 +10,10 @@
                   
         <div class="collapse navbar-collapse justify-content-end" id="mylist" >                   
             <div class="navbar-nav">                              
-                 <router-link :to="{name:'Pensum'}" class="nav-link style-3">Gestionar Usuarios</router-link> 
-                <router-link :to="{name:'Home'}" class="nav-link style-3">Gestionar Usuarios</router-link>
-                <router-link :to="{name:'Home'}" class="nav-link style-3">Gestionar Programas</router-link>
-                <router-link :to="{name:'Home'}" class="nav-link style-3">Gestionar Reporte</router-link>
+                 <router-link :to="{name:'Pensum'}" class="nav-link style-3">Gestionar Pensum</router-link> 
+                <router-link :to="{name:'User'}" class="nav-link style-3">Gestionar Usuarios</router-link>
+                <router-link :to="{name:'Programa'}" class="nav-link style-3">Gestionar Programas</router-link>
+                <router-link :to="{name:'Reporte'}" class="nav-link style-3">Gestionar Reporte</router-link>
                 <router-link :to="{name:'Home'}" class="nav-link style-3">Cerrar Sesión</router-link>                              
             </div>      
         </div>                              
