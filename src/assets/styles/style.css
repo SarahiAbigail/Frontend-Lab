@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;1,100;1,300;1,400&display=swap');
+*{
+    margin: auto;
+    padding: auto;
+}
+.menu{
+    padding: 15px;
+}
+.style-1{
+    color: #ffffff;
+}
+.style-2{
+    background: #d4a449;
+    color: #ffffff;
+}
+.style-3{
+    color: #ffffff;
+    font-weight: bold;
+}
+.style-4{
+    color: #ffffff;
+    font-size: 5px;
+}
+/*Estilos del Formulario*/
+h1{
+    padding-top: 40px;
+}
+.registrarPensum{
+    height: 350px;
+    padding: 20px;
+}
+.inputPensum{
+    margin: 10px;
+    padding: 10px;
+}
+.btnRegistrar{
+    margin-top: 10px;
+    padding: 10px 30px;
+    background: #0b082e ;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer; 
+    width: 300px;  
+}
+a .btnRegistrar:hover{
+    text-decoration: underline;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+}
+a{
+    text-decoration: none;
+    color: #0b082e;
+    font-weight: 300;
+    font-size: medium;
+    margin: 10px;
+    padding: 10px;
+}
+a:hover{
+    text-decoration: underline; 
+}
+
+/*Estilos de la Tabla*/
+.btnBuscar{
+    background: #0b082e ;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer; 
+}
+.btnBuscar:hover{
+    text-decoration: underline;
+    box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.7);
+}
+.input-group{
+    padding: 10px;
+    border: 10px;
+}
+.container-fluid{
+    height: 800px;
+    border: 30px;
+    padding: 30px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.custab{
+    width: 700px;
+    border: 1px solid #ccc;
+    padding: 10px;
+    padding-top: 30px;
+    box-shadow: 3px 3px 2px #ccc;
+    transition: 0.5s;
+}
+.custab:hover{
+    box-shadow: 3px 3px 0px transparent;
+    transition: 0.5s;
+}
+
+.btnModificar{
+    background: #3D56B2;
+}
+.btnBorrar{
+    background: #5C7AEA; 
+}
