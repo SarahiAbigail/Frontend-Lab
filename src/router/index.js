@@ -11,6 +11,7 @@ import EditarPensum from '../views/EditarPensum.vue';
 import User from '../views/User.vue';
 import Programa from '../views/Programa.vue';
 import Reporte from '../views/Reporte.vue';
+import Comision from '../views/Comision.vue';
  
 
 Vue.use(VueRouter)
@@ -65,6 +66,11 @@ const routes = [
     path: '/Reporte',
     name: 'Reporte',
     component: Reporte
+  },
+  {
+    path: '/Comison',
+    name: 'Comision',
+    component: Comision
   }
 ]
 
